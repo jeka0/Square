@@ -11,5 +11,11 @@ public class Computing {
     {
         return ((x-firstPointOfLine.getX())*(lastPointOfLine.getY()-firstPointOfLine.getY()))/(lastPointOfLine.getX()-firstPointOfLine.getX())+firstPointOfLine.getY();
     }
+    static public double calculateLineAngle(Point2D.Double firstPointOfLine, Point2D.Double lastPointOfLine)
+    {
+        double hight = firstPointOfLine.getY() - lastPointOfLine.getY(),
+                width = lastPointOfLine.getX() - firstPointOfLine.getX();
+        return Math.toDegrees(Math.asin(hight/Math.sqrt(hight*hight + width*width)));
+    }
 
 }

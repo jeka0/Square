@@ -15,8 +15,9 @@ public class Main {
         {
           y = Computing.determineYByXFromLine(bigSquare.points[0],new Point2D.Double(bigSquare.side/2,i),bigSquare.side/2-smallSquare.side/2);
           i-=step;
-        }while(y> bigSquare.side- smallSquare.side);
+        }while(y > bigSquare.side- smallSquare.side);
         i+=step;
         System.out.println(i);
+        System.out.println(Computing.calculateLineAngle(bigSquare.points[0],new Point2D.Double(bigSquare.side/2,i)));
     }
 }
